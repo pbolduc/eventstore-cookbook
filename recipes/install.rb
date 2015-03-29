@@ -34,7 +34,7 @@ end
 template "/etc/init/eventstore.conf" do
     source "upstart/eventstore.conf.erb"
     variables ({
-      :logs_dir => node['eventstore']['config']['logsdir'],
+      :logs_dir => node['eventstore']['logs_dir'],
       :data_dir => node['eventstore']['data_dir'],
       :install_dir => node['eventstore']['install_dir'],
       :executable_dir => node['eventstore']['executable_dir'],
