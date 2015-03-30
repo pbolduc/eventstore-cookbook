@@ -12,6 +12,6 @@ default['eventstore']['config_file'] = "#{node['eventstore']['config_dir']}confi
 default['eventstore']['data_dir'] = '/var/lib/eventstore/' 
 default['eventstore']['logs_dir'] = '/var/log/eventstore/' 
 
-default['eventstore']['config']['Log'] = '/var/log/eventstore/'
+default['eventstore']['config']['Log'] = node['eventstore']['logs_dir']
 default['eventstore']['config']['Db'] = node['eventstore']['data_dir']
 default['eventstore']['config']['RunProjections'] = 'ALL'
